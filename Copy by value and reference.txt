@@ -1,0 +1,42 @@
+﻿TASK 1: 
+
+
+COPY BY VALUE:
+       1. In Copy by value the data which variable holds is passed to another variable. 
+       2. Both the variables refer to two different memory locations.
+       3.Primitive data types are performed. i.e.,Numbers,boolean,string,float...
+       3. Even if contents of Copied variable are changed, the original variable value from which it is copied remains the same .
+   Example: 
+         var a=10;
+         var b=a;
+         console.log(a,b);
+          > 10 10
+         b=20;
+         console.log(a,b)
+          > 10 20
+                   
+COPY BY REFERENCE:
+       1.For composite data types objects are copied by reference. i.e.,arrays and objects,functions.
+       2. Actual variable and copied variable both refer to the same memory location.
+       3. SO change in data of copied variable will lead to change in data of original variable too. 
+    Example:
+          var a={name:"bts",age:7};
+          var b=a;
+          console.log(a,b);
+          > {name: "bts", age: 7} {name: "bts", age: 7}
+          b.name="bangtan";
+          console.log(a,b);
+          > {name: "bangtan", age: 7} {name: "bangtan", age: 7}
+                   
+
+
+
+
+
+
+
+
+
+
+
+Example:
