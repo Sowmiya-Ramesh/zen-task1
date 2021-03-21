@@ -7,6 +7,17 @@
     <title>country name</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <script>
+        var request=new XMLHttpRequest();  //instance xml http
+        request.open('GET','https://restcountries.eu/rest/v2/all',true);
+        request.send(); //send the req
+        request.onload=function()
+        {
+            var data=JSON.parse(this.response); 
+            for(var i of data){
+                console.log(i.name);
+            }
+        }   
+        </script>
 </body>
 </html>
