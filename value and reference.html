@@ -8,6 +8,30 @@
 </head>
 <body>
     
-    <script src="copyarrobj.js"></script>
+    <script>
+ //copy by value of composite data type i.e.,array"
+    var a=[1,2,100];
+    var c=[...a];     //using spread operator-shallow copy
+    console.log(a,c);
+    c[2]=80;
+    console.log(a,c);    
+    var d=Object.assign([],a);  //using object.assign -shallow copy
+    d[1]=23;
+    console.log(a,d);
+    var e=JSON.parse(JSON.stringify(a)); //JSON parse and stringify -deep copy
+    e[2]=55;
+    console.log(a,e);
+
+//copy by value of composite data type i.e., objects
+
+       var f={name:"bts",
+       id:[1,2,3],
+       age:{jk:21,kim:24}};
+       var g=JSON.parse(JSON.stringify(f));
+       console.log(f,g); 
+       g.id[2]=4; 
+       g.age.kim=30;
+       console.log(f,g);
+    </script>
 </body>
 </html>
