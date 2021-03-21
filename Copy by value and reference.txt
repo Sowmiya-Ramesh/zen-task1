@@ -28,15 +28,3 @@ COPY BY REFERENCE:
           console.log(a,b);
           > {name: "bangtan", age: 7} {name: "bangtan", age: 7}
                    
-
-
-
-
-
-
-
-
-
-
-
-Example:
